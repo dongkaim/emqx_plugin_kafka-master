@@ -1,0 +1,38 @@
+%%-*- mode: erlang -*-
+%% emqx_plugin_kafka config mapping
+{mapping, "kafka.server", "emqx_plugin_kafka.server", [
+  {default, "127.0.0.1"},
+  {datatype, string}
+]}.
+
+{mapping, "kafka.port", "emqx_plugin_kafka.port", [
+  {default, 9092},
+  {datatype, integer}
+]}.
+
+{mapping, "kafka.topic", "emqx_plugin_kafka.topic", [
+  {default, "dtopic"},
+  {datatype, string}
+]}.
+
+{mapping, "kafka.etopic", "emqx_plugin_kafka.etopic", [
+  {default, "etopic"},
+  {datatype, string}
+]}.
+
+{mapping, "kafka.partition", "emqx_plugin_kafka.partition", [
+  {default, 0},
+  {datatype, integer}
+]}.
+
+{mapping, "kafka.offset", "emqx_plugin_kafka.offset", [
+  {default, 0},
+  {datatype, integer}
+]}.
+
+
+{mapping, "kafka.encode", "emqx_plugin_kafka.encode", [
+  {default, undefined},
+  {datatype, {enum, [base62, base64]}}
+]}.
+
